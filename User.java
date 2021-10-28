@@ -1,10 +1,11 @@
 import java.util.Calendar;
 
 public class User {
+    private final String userID;
     private final String username;
-    private final String email;
+    private String email;
     private final String password;
-    private final Calendar birthdate;
+    private Calendar birthdate;
 
     public User(String username, String email, String password, Calendar birthdate) {
         this.username = username;
@@ -21,6 +22,10 @@ public class User {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -29,8 +34,17 @@ public class User {
         return birthdate;
     }
 
+    public void setBirthdate(Calendat date) {
+        this.birthdate = date;
+    }
+
     @Override
     public String toString() {
         return this.username + " " + this.email + this.password + this.birthdate.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this == obj;
     }
 }
