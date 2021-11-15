@@ -18,5 +18,3 @@ public class RegistrationResult {
         this.reason = callback;
     }
 }
-
-
