@@ -1,14 +1,15 @@
 public class Control {
-    public RegistrationResult registerUser(User dto) {
+    public static RegistrationResult registerUser(UserDTO dto) {
         RegistrationResult result = new RegistrationResult();
-        String mail = dto.getMail();
+        //String mail = dto.getEmail();
+        String password = dto.getPassword();
 
-        if (dto.getPassword() == null || dto.getPassword().equals("")) {
-            result.setReason(RegistrationResult.PASSWORD_MISSING);
+        if (password == null || password.equals("")) {
+            result.setReason(RegistrationResult.Reason.PASSWORD_MISSING);
             result.setResult(false);
         }
         else {
-            result.setReason(RegistrationResult.SUCCESS);
+            result.setReason(RegistrationResult.Reason.SUCCESS);
             result.setResult(true);
         }
 
