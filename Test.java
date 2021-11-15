@@ -1,7 +1,7 @@
 public class Test {
     @Test
     public void testEasy() {
-        RegistrationResult result = new RegistrationResult(new UserDTO());
+        RegistrationResult result = Control.registerUser(new UserDTO());
         assertNotNull(result);
     }
 
