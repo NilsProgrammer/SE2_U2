@@ -7,8 +7,6 @@ public class UserBuilder {
         return new UserBuilder();
     }
 
-    
-
     public UserDTO done() {
         return this.user;
     }

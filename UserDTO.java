@@ -48,7 +48,6 @@ public class UserDTO {
         return this == obj;
     }
 
-    
     public boolean equals(UserDTO other) {
         return
             this.ID == other.ID &&
